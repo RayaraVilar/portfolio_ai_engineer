@@ -6,25 +6,32 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#fdf4ff', 100: '#fae8ff', 200: '#f5d0fe', 300: '#f0abfc',
-          400: '#e879f9', 500: '#d946ef', 600: '#c026d3', 700: '#a21caf',
+          50: '#fff1eb',
+          100: '#ffdacc',
+          200: '#ffb79d',
+          300: '#ff8f70',
+          400: '#f86d47',
+          500: '#f15a24',
+          600: '#d94b1c',
+          700: '#b53e1a',
+          800: '#6d28d9',
+          900: '#4c1d95'
         },
         soft: {
-          bg: '#fafaf9',       // Warm white
+          bg: '#fff8f6',
           card: '#ffffff',
-          darkBg: '#0f172a',   // Slate 900
-          darkCard: '#1e293b', // Slate 800
-          text: '#334155',     // Slate 700
-          darkText: '#e2e8f0', // Slate 200
-          accent: '#fb7185',   // Soft coral
+          darkBg: '#120f1d',
+          darkCard: '#1d1930',
+          text: '#2f243f',
+          darkText: '#f8f4ff'
         }
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
-        display: ['Poppins', 'sans-serif'],
+        display: ['Poppins', 'sans-serif']
       },
       borderRadius: { '4xl': '2rem' }
-    },
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};
