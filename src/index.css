@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-soft-bg text-soft-text dark:bg-soft-darkBg dark:text-soft-darkText transition-colors duration-300 font-sans;
+}
+
+/* Scrollbar personalizada e delicada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-soft-bg dark:bg-soft-darkBg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-300 dark:bg-brand-600 rounded-full;
+}
+
+@theme {
+  /* Light mode */
+  --color-soft-bg: #fffafc;
+  --color-soft-card: #ffffff;
+  --color-soft-text: #2f2933;
+
+  /* Dark mode */
+  --color-soft-darkBg: #16131d;
+  --color-soft-darkCard: #211c2b;
+  --color-soft-darkText: #f6eff8;
+
+  /* Brand */
+  --color-brand-100: #f9e6f1;
+  --color-brand-200: #f3cfe3;
+  --color-brand-300: #eeb7d6;
+  --color-brand-400: #e58bc0;
+  --color-brand-500: #d96bb3;
+  --color-brand-600: #bf4f98;
+
+  /* Accent */
+  --color-accent: #b8e7e1;
+}
