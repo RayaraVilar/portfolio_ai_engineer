@@ -24,7 +24,7 @@ export default function About() {
             ['Python', 'Linguagem Principal'],
             ['UX + IA', 'Soluções Humanizadas']
           ].map(([n, l]) => (
-            <div key={l} className="text-center p-4 bg-gradient-to-br from-orange-50 to-purple-50 dark:from-orange-500/10 dark:to-purple-500/10 rounded-2xl border border-orange-200/50 dark:border-purple-400/10">
+            <div key={l} className="text-center p-4 bg-brand-50 dark:bg-brand-900/15 rounded-2xl border border-brand-200/60 dark:border-brand-700/20">
               <span className="block text-2xl font-bold text-orange-600 dark:text-orange-300">{n}</span>
               <span className="text-sm text-soft-text/85 dark:text-soft-darkText/85">{l}</span>
             </div>
