@@ -11,15 +11,15 @@ export default function Contact() {
                 <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
                     <div className="flex items-start gap-4">
                         <Mail className="text-brand-500 mt-1" />
-                        <div><h4 className="font-medium">E-mail</h4><p className="text-soft-text/70">{contactInfo.email}</p></div>
+                        <div><h4 className="font-medium">E-mail</h4><p className="text-soft-text/80 dark:text-soft-darkText/80">{contactInfo.email}</p></div>
                     </div>
                     <div className="flex items-start gap-4">
                         <Phone className="text-brand-500 mt-1" />
-                        <div><h4 className="font-medium">Telefone</h4><p className="text-soft-text/70">{contactInfo.phone}</p></div>
+                        <div><h4 className="font-medium">Telefone</h4><p className="text-soft-text/80 dark:text-soft-darkText/80">{contactInfo.phone}</p></div>
                     </div>
                     <div className="flex items-start gap-4">
                         <MapPin className="text-brand-500 mt-1" />
-                        <div><h4 className="font-medium">Localização</h4><p className="text-soft-text/70">{contactInfo.location}</p></div>
+                        <div><h4 className="font-medium">Localização</h4><p className="text-soft-text/80 dark:text-soft-darkText/80">{contactInfo.location}</p></div>
                     </div>
                     <div className="flex gap-4 mt-6">
                         <a href={contactInfo.linkedin} target="_blank" className="p-3 bg-soft-card dark:bg-soft-darkCard rounded-xl hover:bg-brand-100 dark:hover:bg-brand-900/30 transition"><FaLinkedinIn size={20} /></a>

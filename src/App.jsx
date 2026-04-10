@@ -10,7 +10,7 @@ import { ThemeProvider } from './context/ThemeContext';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-soft-bg dark:bg-soft-darkBg">
         <Navbar />
         <Hero />
         <About />
@@ -18,8 +18,8 @@ function App() {
         <Projects />
         <Timeline />
         <Contact />
-        <footer className="py-8 text-center text-sm text-soft-text/50 dark:text-soft-darkText/50 border-t border-soft-text/5 dark:border-soft-darkText/10">
-          © {new Date().getFullYear()} Rayara de Andrade Vilar. Feito com 💜 e IA.
+        <footer className="py-8 text-center text-sm text-soft-text/70 dark:text-soft-darkText/60 border-t border-soft-text/10 dark:border-soft-darkText/10">
+          © {new Date().getFullYear()} Rayara de Andrade Vilar.
         </footer>
       </div>
     </ThemeProvider>
