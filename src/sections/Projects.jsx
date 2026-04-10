@@ -38,7 +38,7 @@ export default function Projects() {
             onClick={() => handleFilter(cat)}
             className={`px-4 py-2 rounded-full text-sm font-semibold transition ${
               filter === cat
-                ? 'bg-brand-500 text-white'
+                ? 'bg-gradient-to-r from-orange-500 to-purple-600 text-white'
                 : 'bg-soft-card dark:bg-soft-darkCard text-soft-text/90 dark:text-soft-darkText/90 hover:bg-orange-100 dark:hover:bg-purple-900/30'
             }`}
           >
@@ -59,7 +59,7 @@ export default function Projects() {
               transition={{ duration: 0.25 }}
               className="group bg-soft-card dark:bg-soft-darkCard rounded-3xl overflow-hidden border border-soft-text/10 dark:border-soft-darkText/10 hover:shadow-xl hover:shadow-purple-500/10 transition"
             >
-              <div className="h-44 bg-brand-100/60 dark:bg-brand-900/20 flex items-center justify-center text-5xl">
+              <div className="h-44 bg-gradient-to-br from-orange-100 via-orange-50 to-purple-100 dark:from-orange-500/15 dark:to-purple-500/20 flex items-center justify-center text-5xl">
                 <span>{project.icon || '🚀'}</span>
               </div>
               <div className="p-6">

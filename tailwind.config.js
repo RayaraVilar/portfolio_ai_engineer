@@ -6,19 +6,19 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#fff1eb',
-          100: '#ffdacc',
-          200: '#ffb79d',
-          300: '#ff8f70',
-          400: '#f86d47',
-          500: '#f15a24',
-          600: '#d94b1c',
-          700: '#b53e1a',
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
           800: '#6d28d9',
           900: '#4c1d95'
         },
         soft: {
-          bg: '#fff8f6',
+          bg: '#fffaf5',
           card: '#ffffff',
           darkBg: '#120f1d',
           darkCard: '#1d1930',

@@ -45,7 +45,7 @@ export default function Navbar() {
             href={cvLink}
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-full text-sm font-semibold transition"
+            className="px-4 py-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white rounded-full text-sm font-semibold hover:opacity-90 transition"
           >
             Baixar currículo
           </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
             <button onClick={toggleTheme} className="px-3 py-2 rounded-lg border border-soft-text/15 dark:border-soft-darkText/15 text-sm font-medium">
               {isDark ? 'Modo claro' : 'Modo escuro'}
             </button>
-            <a href={cvLink} target="_blank" rel="noreferrer" className="px-3 py-2 rounded-lg bg-brand-500 hover:bg-brand-600 text-white text-sm font-medium transition">
+            <a href={cvLink} target="_blank" rel="noreferrer" className="px-3 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-purple-600 text-white text-sm font-medium">
               Baixar currículo
             </a>
           </div>
