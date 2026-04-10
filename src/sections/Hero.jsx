@@ -1,7 +1,13 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Mail } from 'lucide-react';
+import { ArrowDown, Mail, Cpu, Code2, Bot } from 'lucide-react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import avatar from '../assets/avatar-rayara.png';
+
+const floatingTags = [
+    { icon: Cpu, label: 'AI', className: '-left-4 top-8' },
+    { icon: Code2, label: '</>', className: 'right-2 top-6' },
+    { icon: Bot, label: 'Python', className: '-right-4 bottom-10' }
+];
 
 export default function Hero() {
     return (
