@@ -18,7 +18,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-soft-bg/85 dark:bg-soft-darkBg/85 backdrop-blur-xl border-b border-soft-text/10 dark:border-soft-darkText/15">
       <div className="max-w-6xl mx-auto px-4 md:px-8 flex justify-between items-center h-16">
         <a href="#" className="font-display font-bold text-lg md:text-xl text-orange-600 dark:text-purple-300 tracking-wide">
-          Rayara Ai engineer
+          Rayara - Ai engineer
         </a>
 
         <div className="hidden md:flex items-center gap-6">
@@ -45,7 +45,7 @@ export default function Navbar() {
             href={cvLink}
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 bg-gradient-to-r from-orange-500 to-purple-600 text-white rounded-full text-sm font-semibold hover:opacity-90 transition"
+            className="px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-semibold hover:opacity-90 transition"
           >
             Baixar currículo
           </a>
