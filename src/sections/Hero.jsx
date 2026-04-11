@@ -45,12 +45,14 @@ export default function Hero() {
                 </motion.div>
 
                 <motion.div
-                    initial={{ scale: 0.96 }}
-                    animate={{ scale: 1, y: [0, -10, 0] }}
-                    transition={{ duration: 3.2, delay: 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                    initial={{ opacity: 0, scale: 0.92 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                    transition={{ duration: 4, delay: 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                    whileHover={{ scale: 1.04, rotate: 1 }}
                     className="relative flex justify-center"
                 >
-                    <div className="relative rounded-[2.5rem] p-4 border border-soft-text/15 dark:border-soft-darkText/20 bg-soft-card dark:bg-soft-darkCard shadow-2xl">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-transparent to-purple-500/25 rounded-full blur-3xl" />
+                    <div className="relative rounded-[2.5rem] p-4 border border-white/30 dark:border-soft-darkText/10 bg-white/30 dark:bg-white/5 backdrop-blur-xl shadow-2xl">
                         <img src={avatar} alt="Rayara Vilar - AI Engineer" className="w-72 h-72 md:w-96 md:h-96 object-contain drop-shadow-2xl scale-x-100" />
                     </div>
                 </motion.div>
