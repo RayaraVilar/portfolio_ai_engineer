@@ -17,7 +17,7 @@ export default function Hero() {
                     <span className="inline-block px-4 py-1.5 bg-orange-100 dark:bg-purple-900/30 text-orange-700 dark:text-orange-500 rounded-full text-sm font-semibold mb-5">
                         👋 Olá, sou a Rayara
                     </span>
-                    <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight mb-4 text-soft-text dark:text-soft-darkText">
+                    <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4 text-soft-text dark:text-soft-darkText">
                         AI Engineer com foco em <span className="text-transparent bg-clip-text bg-purple-600">Python & IA aplicada</span>
                     </h1>
                     <p className="text-lg md:text-xl text-soft-text/85 dark:text-soft-darkText/85 mb-7 max-w-xl leading-relaxed">
