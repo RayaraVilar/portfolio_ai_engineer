@@ -10,7 +10,7 @@ export default function SectionWrapper({ id, title, subtitle, children, classNam
         transition={{ duration: 0.5 }}
         className="mb-12 text-center"
       >
-        <h2 className="font-display text-3xl md:text-4xl font-semibold uppercase tracking-[0.14em] text-brand-600 dark:text-brand-300 mb-2">{title}</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold uppercase tracking-normal text-orange-500 dark:text-orange-500 mb-2">{title}</h2>
         {subtitle && <p className="text-soft-text/75 dark:text-soft-darkText/75 max-w-xl mx-auto">{subtitle}</p>}
       </motion.div>
       {children}
