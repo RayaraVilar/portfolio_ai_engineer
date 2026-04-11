@@ -26,7 +26,7 @@ export default function Navbar() {
             <a
               key={l}
               href={getSectionHref(l)}
-              className="text-sm font-semibold text-soft-text/90 dark:text-soft-darkText/90 hover:text-orange-500 dark:hover:text-orange-300 transition-colors"
+              className="text-sm font-semibold tracking-normal text-orange-500 dark:text-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
             >
               {l}
             </a>
@@ -62,7 +62,7 @@ export default function Navbar() {
             <a
               key={l}
               href={getSectionHref(l)}
-              className="text-sm font-medium text-soft-text dark:text-soft-darkText"
+              className="text-sm font-medium tracking-normal text-orange-500 dark:text-orange-500 hover:text-orange-600 dark:hover:text-orange-400"
               onClick={() => setOpen(false)}
             >
               {l}
