@@ -46,9 +46,9 @@ export default function Hero() {
 
                 <motion.div
                     initial={{ opacity: 0, scale: 0.92 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    whileHover={{ y: -10, scale: 1.04, rotate: 1 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                    transition={{ duration: 4, delay: 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                    whileHover={{ scale: 1.04, rotate: 1 }}
                     className="relative flex justify-center"
                 >
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-transparent to-purple-500/25 rounded-full blur-3xl" />
