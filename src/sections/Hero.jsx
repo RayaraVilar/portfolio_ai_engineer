@@ -17,7 +17,7 @@ export default function Hero() {
                     <span className="inline-block px-4 py-1.5 bg-orange-100 dark:bg-purple-900/30 text-orange-700 dark:text-orange-500 rounded-full text-sm font-semibold mb-5">
                         👋 Olá, sou a Rayara
                     </span>
-                    <h1 className="font-display text-5xl md:text-6xl font-bold leading-tight mb-4 text-soft-text dark:text-soft-darkText">
+                    <h1 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-4 text-soft-text dark:text-soft-darkText">
                         AI Engineer com foco em <span className="text-transparent bg-clip-text bg-purple-600">Python & IA aplicada</span>
                     </h1>
                     <p className="text-lg md:text-xl text-soft-text/85 dark:text-soft-darkText/85 mb-7 max-w-xl leading-relaxed">
@@ -44,7 +44,13 @@ export default function Hero() {
                     </div>
                 </motion.div>
 
-                <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }} className="relative flex justify-center">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.92 }}
+                    animate={{ opacity: 1, scale: 1, y: [0, -12, 0] }}
+                    transition={{ duration: 4, delay: 0.2, repeat: Infinity, ease: 'easeInOut' }}
+                    whileHover={{ scale: 1.04, rotate: 1 }}
+                    className="relative flex justify-center"
+                >
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-transparent to-purple-500/25 rounded-full blur-3xl" />
                     <div className="relative rounded-[2.5rem] p-4 border border-white/30 dark:border-soft-darkText/10 bg-white/30 dark:bg-white/5 backdrop-blur-xl shadow-2xl">
                         <img src={avatar} alt="Rayara Vilar - AI Engineer" className="w-72 h-72 md:w-96 md:h-96 object-contain drop-shadow-2xl scale-x-100" />
