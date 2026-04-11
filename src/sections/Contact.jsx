@@ -8,22 +8,46 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [statusMessage, setStatusMessage] = useState('');
+  const [isSending, setIsSending] = useState(false);
 
   const handleChange = (field) => (event) => {
     setFormData((prev) => ({ ...prev, [field]: event.target.value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsSending(true);
+    setStatusMessage('');
 
-    const subject = encodeURIComponent(`Contato do portfólio - ${formData.name || 'Sem nome'}`);
-    const body = encodeURIComponent(
-      `Nome: ${formData.name}\nEmail: ${formData.email}\n\nMensagem:\n${formData.message}`
-    );
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${contactInfo.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `Contato do portfólio - ${formData.name || 'Sem nome'}`,
+          _template: 'table'
+        })
+      });
 
-    window.location.href = `mailto:${contactInfo.email}?subject=${subject}&body=${body}`;
-    setStatusMessage('Email enviado com sucesso! ✅');
-    setFormData({ name: '', email: '', message: '' });
+      const result = await response.json();
+
+      if (!response.ok || result.success === false) {
+        throw new Error('Falha ao enviar mensagem.');
+      }
+
+      setStatusMessage('Email enviado com sucesso! ✅');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setStatusMessage('Não foi possível enviar agora. Tente novamente em instantes.');
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -74,7 +98,7 @@ export default function Contact() {
             value={formData.name}
             onChange={handleChange('name')}
             required
-            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition"
+            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition placeholder:text-soft-text/70 dark:placeholder:text-soft-darkText/70"
           />
           <input
             type="email"
@@ -82,7 +106,7 @@ export default function Contact() {
             value={formData.email}
             onChange={handleChange('email')}
             required
-            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition"
+            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition placeholder:text-soft-text/70 dark:placeholder:text-soft-darkText/70"
           />
           <textarea
             rows="4"
@@ -90,12 +114,12 @@ export default function Contact() {
             value={formData.message}
             onChange={handleChange('message')}
             required
-            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition resize-none"
+            className="w-full px-4 py-3 bg-soft-bg dark:bg-soft-darkBg rounded-xl border border-transparent focus:border-brand-400 focus:outline-none transition placeholder:text-soft-text/70 dark:placeholder:text-soft-darkText/70 resize-none"
           />
-          <button type="submit" className="w-full py-3 bg-brand-500 text-white rounded-xl font-medium hover:bg-brand-600 transition shadow-lg shadow-brand-500/20">
-            Enviar Mensagem
+          <button type="submit" disabled={isSending} className="w-full py-3 bg-brand-500 text-white rounded-xl font-medium hover:bg-brand-600 transition shadow-lg shadow-brand-500/20 disabled:opacity-70 disabled:cursor-not-allowed">
+            {isSending ? 'Enviando...' : 'Enviar Mensagem'}
           </button>
-          {statusMessage && <p className="text-sm font-medium text-brand-600 dark:text-brand-300">{statusMessage}</p>}
+          {statusMessage && <p className="text-sm font-medium text-brand-700 dark:text-brand-200">{statusMessage}</p>}
         </motion.form>
       </div>
     </SectionWrapper>
